@@ -14,7 +14,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Fetch latest data
       run: |-
-        curl https://s3-eu-west-1.amazonaws.com/plex-sidekiq-servers-list/sidekiqIPs.txt | jq . > plex-ips.json
+        curl https://s3-eu-west-1.amazonaws.com/plex-sidekiq-servers-list/sidekiqIPs.txt > plex-ips.json
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
